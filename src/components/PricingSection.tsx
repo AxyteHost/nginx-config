@@ -69,7 +69,7 @@ const PricingSection = () => {
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <p className="text-muted-foreground">Starting at</p>
-                      <div className="text-5xl font-bold text-foreground my-2">Free</div>
+                      <div className="text-5xl font-bold text-foreground my-2">???</div>
                       <ul className="space-y-3 my-8">
                         {plan.features.map((feat) => (
                           <li key={feat} className="flex items-center text-muted-foreground">
