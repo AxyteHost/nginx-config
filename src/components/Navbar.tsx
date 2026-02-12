@@ -9,16 +9,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center">
-            <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 10L80 80H20L50 10Z" fill="url(#logo-grad)" />
-              <defs>
-                <linearGradient id="logo-grad" x1="20" y1="80" x2="80" y2="10">
-                  <stop stopColor="#FF4C00" />
-                  <stop offset="1" stopColor="#FFA000" />
-                </linearGradient>
-              </defs>
-            </svg>
+          <a href="#" className="flex items-center gap-2">
+            <img src="/images/logo.png" alt="RenderByte" className="w-9 h-9 rounded" />
+            <span className="text-foreground font-bold text-lg hidden sm:inline">RenderByte</span>
           </a>
 
           {/* Center nav links */}

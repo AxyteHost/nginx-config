@@ -22,7 +22,7 @@ const FAQSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <img src="/images/faq.png" alt="AeroX FAQ Illustration" className="w-full h-auto max-w-md mx-auto" />
+            <img src="/images/faq.png" alt="EIRO FAQ Illustration" className="w-full h-auto max-w-md mx-auto" />
           </motion.div>
 
           <div>

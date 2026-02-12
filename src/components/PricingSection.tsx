@@ -16,7 +16,7 @@ const plans = [
     features: ["Instant deployment", "DDoS protection", "24/7 support", "Custom configurations", "Mod support"],
   },
   {
-    name: "Lavalink",
+    name: "VPS Hosting",
     image: "/images/lavalink.webp",
     popular: false,
     features: ["Full root access", "SSD storage", "99.9% uptime", "Multiple node options", "Backup included"],
