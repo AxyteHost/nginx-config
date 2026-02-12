@@ -20,8 +20,8 @@ const locations = [
         </g>
       </svg>
     ),
-    // Corrected position (Equator + Southeast Asia)
-    dotPos: { top: "58%", left: "79%" },
+    // Near equator, Southeast Asia
+    dotPos: { top: "59%", left: "80%" },
   },
   {
     name: "India",
@@ -48,8 +48,8 @@ const locations = [
         </g>
       </svg>
     ),
-    // Slightly north-west of Singapore
-    dotPos: { top: "52%", left: "72%" },
+    // North of equator, slightly west of Singapore
+    dotPos: { top: "47%", left: "69%" },
   },
 ];
 
@@ -97,7 +97,7 @@ const LocationsSection = () => {
           ))}
         </div>
 
-        {/* Map */}
+        {/* Map Section */}
         <motion.div
           className="relative w-full max-w-5xl mx-auto aspect-[2/1]"
           initial={{ opacity: 0, scale: 0.95 }}
