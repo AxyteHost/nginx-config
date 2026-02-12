@@ -20,7 +20,8 @@ const locations = [
         </g>
       </svg>
     ),
-    dotPos: { top: "40%", left: "73%" },
+    // Corrected position (Equator + Southeast Asia)
+    dotPos: { top: "58%", left: "79%" },
   },
   {
     name: "India",
@@ -47,7 +48,8 @@ const locations = [
         </g>
       </svg>
     ),
-    dotPos: { top: "42%", left: "67%" },
+    // Slightly north-west of Singapore
+    dotPos: { top: "52%", left: "72%" },
   },
 ];
 
@@ -95,7 +97,7 @@ const LocationsSection = () => {
           ))}
         </div>
 
-        {/* Map Section */}
+        {/* Map */}
         <motion.div
           className="relative w-full max-w-5xl mx-auto aspect-[2/1]"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -112,7 +114,7 @@ const LocationsSection = () => {
             <div key={loc.name} className="absolute" style={loc.dotPos}>
               <div className="relative flex justify-center items-center">
                 <div className="absolute w-4 h-4 rounded-full bg-primary animate-ping opacity-75" />
-                <div className="w-2 h-2 rounded-full bg-primary" />
+                <div className="w-2 h-2 rounded-full bg-primary shadow-lg shadow-primary/50" />
               </div>
             </div>
           ))}
