@@ -1,24 +1,58 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const DISCORD_LINK = "https://discord.gg/renderbyte";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setMoreOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img src="/images/logo.png" alt="RenderByte" className="w-9 h-9" />
             <span className="text-foreground font-bold text-lg hidden sm:inline">RenderByte</span>
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center bg-secondary/50 rounded-full px-1 py-1 border border-white/5">
-            <a href="#" className="px-5 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-full">Home</a>
-            <a href="#pricing" className="px-5 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full">Services</a>
-            <a href="#features" className="px-5 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full">More</a>
+            <Link to="/" className="px-5 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-full">Home</Link>
+            <Link to="/services" className="px-5 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full">Services</Link>
+            <div ref={moreRef} className="relative">
+              <button
+                onClick={() => setMoreOpen(!moreOpen)}
+                className="flex items-center gap-1 px-5 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full"
+              >
+                More <ChevronDown size={14} className={`transition-transform ${moreOpen ? "rotate-180" : ""}`} />
+              </button>
+              {moreOpen && (
+                <div className="absolute top-full right-0 mt-2 w-48 bg-secondary border border-white/10 rounded-xl shadow-xl overflow-hidden z-50">
+                  <Link to="/about" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">About Us</Link>
+                  <Link to="/support" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">Support</Link>
+                  <Link to="/tos" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">Terms of Service</Link>
+                  <Link to="/privacy" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">Privacy Policy</Link>
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="hidden md:block">
@@ -43,9 +77,12 @@ const Navbar = () => {
 
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-white/5 px-4 py-4 space-y-3">
-          <a href="#" className="block text-foreground font-medium py-2">Home</a>
-          <a href="#pricing" className="block text-muted-foreground font-medium py-2">Services</a>
-          <a href="#features" className="block text-muted-foreground font-medium py-2">More</a>
+          <Link to="/" className="block text-foreground font-medium py-2">Home</Link>
+          <Link to="/services" className="block text-muted-foreground font-medium py-2">Services</Link>
+          <Link to="/about" className="block text-muted-foreground font-medium py-2">About Us</Link>
+          <Link to="/support" className="block text-muted-foreground font-medium py-2">Support</Link>
+          <Link to="/tos" className="block text-muted-foreground font-medium py-2">Terms of Service</Link>
+          <Link to="/privacy" className="block text-muted-foreground font-medium py-2">Privacy Policy</Link>
           <a href={DISCORD_LINK} target="_blank" rel="noopener noreferrer" className="block w-full bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold mt-2 text-center">Discord</a>
         </div>
       )}
