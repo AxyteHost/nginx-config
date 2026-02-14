@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Info, Headset, FileText, ShieldCheck } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const DISCORD_LINK = "https://discord.gg/renderbyte";
@@ -46,10 +46,10 @@ const Navbar = () => {
               </button>
               {moreOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-secondary border border-white/10 rounded-xl shadow-xl overflow-hidden z-50">
-                  <Link to="/about" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">About Us</Link>
-                  <Link to="/support" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">Support</Link>
-                  <Link to="/tos" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">Terms of Service</Link>
-                  <Link to="/privacy" className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors">Privacy Policy</Link>
+                  <Link to="/about" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><Info size={15} /> About Us</Link>
+                  <Link to="/support" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><Headset size={15} /> Support</Link>
+                  <Link to="/tos" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><FileText size={15} /> Terms of Service</Link>
+                  <Link to="/privacy" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><ShieldCheck size={15} /> Privacy Policy</Link>
                 </div>
               )}
             </div>
