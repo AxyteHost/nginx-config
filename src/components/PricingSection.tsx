@@ -7,18 +7,21 @@ const plans = [
   {
     name: "Bot Hosting",
     image: "/images/discord.png",
+    startingPrice: "$1.00",
     popular: true,
     features: ["ECC Memory", "Fast Performance", "Low Latency", "Advanced security", "Managed services"],
   },
   {
     name: "Game Servers",
     image: "/images/mc.jpg",
+    startingPrice: "$2.50",
     popular: false,
     features: ["Instant deployment", "DDoS protection", "24/7 support", "Custom configurations", "Mod support"],
   },
   {
     name: "VPS Hosting",
     image: "/images/vps.png",
+    startingPrice: "$5.00",
     popular: false,
     features: ["Full root access", "SSD storage", "99.9% uptime", "Multiple node options", "Backup included"],
   },
@@ -69,7 +72,7 @@ const PricingSection = () => {
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <p className="text-muted-foreground">Starting at</p>
-                      <div className="text-5xl font-bold text-foreground my-2">???</div>
+                      <div className="text-5xl font-bold text-foreground my-2">{plan.startingPrice}<span className="text-lg text-muted-foreground font-normal">/mo</span></div>
                       <ul className="space-y-3 my-8">
                         {plan.features.map((feat) => (
                           <li key={feat} className="flex items-center text-muted-foreground">
