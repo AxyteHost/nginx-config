@@ -17,6 +17,10 @@ import TermsOfService from "./pages/TermsOfService";
 import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import NewTicket from "./pages/dashboard/NewTicket";
+import TicketDetail from "./pages/dashboard/TicketDetail";
+import AdminPanel from "./pages/admin/AdminPanel";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +44,10 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/tickets/new" element={<NewTicket />} />
+          <Route path="/dashboard/tickets/:id" element={<TicketDetail />} />
+          <Route path="/admin/*" element={<AdminPanel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
