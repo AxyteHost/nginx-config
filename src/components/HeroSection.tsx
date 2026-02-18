@@ -32,7 +32,7 @@ const HeroSection = () => {
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight">
               Host your own<br />
-              <span className="text-gradient-purple h-20 block">Discord Bot</span>
+              <span className="text-gradient-blue h-20 block">Discord Bot</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-lg">
               Experience lightning-fast performance, unbeatable reliability, and 24/7 support for all your favorite games and applications.

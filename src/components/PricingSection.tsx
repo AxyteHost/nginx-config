@@ -1,4 +1,5 @@
 import { Check, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const DISCORD_LINK = "https://discord.gg/renderbyte";
@@ -7,23 +8,26 @@ const plans = [
   {
     name: "Bot Hosting",
     image: "/images/discord.png",
-    startingPrice: "$1.00",
+    startingPrice: "₹1.00",
     popular: true,
+    link: "/services/discord",
     features: ["ECC Memory", "Fast Performance", "Low Latency", "Advanced security", "Managed services"],
   },
   {
-    name: "Game Servers",
+    name: "Minecraft Servers",
     image: "/images/mc.jpg",
-    startingPrice: "$2.50",
+    startingPrice: "₹2.50",
     popular: false,
+    link: "/services/minecraft",
     features: ["Instant deployment", "DDoS protection", "24/7 support", "Custom configurations", "Mod support"],
   },
   {
-    name: "VPS Hosting",
-    image: "/images/vps.png",
-    startingPrice: "$5.00",
+    name: "Hytale Hosting",
+    image: "/images/hytale.jpg",
+    startingPrice: "₹79",
     popular: false,
-    features: ["Full root access", "SSD storage", "99.9% uptime", "Multiple node options", "Backup included"],
+    link: "/services/hytale",
+    features: ["Up to 32GB RAM", "DDoS protection", "NVMe SSD", "Full mod support", "Instant setup"],
   },
 ];
 
@@ -81,20 +85,18 @@ const PricingSection = () => {
                           </li>
                         ))}
                       </ul>
-                      <a
-                        href={DISCORD_LINK}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        to={plan.link}
                         className="no-underline group cursor-pointer relative shadow-lg shadow-zinc-900 rounded-full p-px font-semibold leading-6 text-foreground inline-block w-full rounded-lg mt-auto"
                       >
                         <span className="absolute inset-0 overflow-hidden rounded-full">
-                          <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,hsl(270_70%_72%_/_0.6)_0%,hsl(270_70%_72%_/_0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                          <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,hsl(200_100%_55%_/_0.6)_0%,hsl(200_100%_55%_/_0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                         </span>
                         <div className="relative flex space-x-2 items-center z-10 rounded-full py-3 px-6 ring-1 ring-white/10 bg-zinc-950 justify-center">
                           <span>Start Now</span>
                         </div>
                         <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-transparent via-primary/90 to-transparent transition-opacity duration-500 group-hover:opacity-40" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

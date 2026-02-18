@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 260 20% 4%;
+    --background: 210 20% 4%;
     --foreground: 0 0% 100%;
 
-    --card: 260 15% 7%;
+    --card: 210 15% 7%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 260 15% 7%;
+    --popover: 210 15% 7%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 270 70% 72%;
-    --primary-foreground: 260 20% 4%;
+    --primary: 200 100% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 260 15% 12%;
+    --secondary: 210 15% 12%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 260 10% 15%;
-    --muted-foreground: 260 10% 64%;
+    --muted: 210 10% 15%;
+    --muted-foreground: 210 10% 64%;
 
-    --accent: 275 60% 65%;
+    --accent: 195 90% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,18 +30,18 @@
 
     --border: 0 0% 100% / 0.1;
     --input: 0 0% 100% / 0.1;
-    --ring: 270 70% 72%;
+    --ring: 200 100% 55%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 260 15% 7%;
+    --sidebar-background: 210 15% 7%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 270 70% 72%;
+    --sidebar-primary: 200 100% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 260 15% 12%;
+    --sidebar-accent: 210 15% 12%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 260 10% 15%;
-    --sidebar-ring: 270 70% 72%;
+    --sidebar-border: 210 10% 15%;
+    --sidebar-ring: 200 100% 55%;
   }
 }
 
@@ -57,8 +57,8 @@
 }
 
 @layer utilities {
-  .text-gradient-purple {
-    @apply bg-gradient-to-r from-[hsl(270,70%,72%)] to-[hsl(300,60%,80%)] bg-clip-text text-transparent;
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-[hsl(200,100%,55%)] to-[hsl(180,80%,60%)] bg-clip-text text-transparent;
   }
 
   .glow-card {
@@ -67,8 +67,8 @@
 
   .section-badge {
     @apply inline-flex items-center gap-2 text-sm font-semibold px-4 py-1 rounded-full;
-    background: hsl(270 70% 72% / 0.2);
-    color: hsl(275 60% 80%);
+    background: hsl(200 100% 55% / 0.2);
+    color: hsl(195 90% 70%);
   }
 
   .section-title {

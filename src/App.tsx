@@ -9,8 +9,6 @@ import Services from "./pages/Services";
 import MinecraftHosting from "./pages/services/MinecraftHosting";
 import DiscordHosting from "./pages/services/DiscordHosting";
 import HytaleHosting from "./pages/services/HytaleHosting";
-import VPSHosting from "./pages/services/VPSHosting";
-import CustomHosting from "./pages/services/CustomHosting";
 import About from "./pages/About";
 import Support from "./pages/Support";
 import TermsOfService from "./pages/TermsOfService";
@@ -36,8 +34,6 @@ const App = () => (
           <Route path="/services/minecraft" element={<MinecraftHosting />} />
           <Route path="/services/discord" element={<DiscordHosting />} />
           <Route path="/services/hytale" element={<HytaleHosting />} />
-          <Route path="/services/vps" element={<VPSHosting />} />
-          <Route path="/services/custom" element={<CustomHosting />} />
           <Route path="/about" element={<About />} />
           <Route path="/support" element={<Support />} />
           <Route path="/tos" element={<TermsOfService />} />

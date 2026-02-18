@@ -34,8 +34,6 @@ const Footer = () => {
               <li><Link to="/services/minecraft" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Minecraft Hosting</Link></li>
               <li><Link to="/services/discord" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Discord Bot Hosting</Link></li>
               <li><Link to="/services/hytale" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Hytale Hosting</Link></li>
-              <li><Link to="/services/vps" className="text-muted-foreground hover:text-foreground text-sm transition-colors">VPS Hosting</Link></li>
-              <li><Link to="/services/custom" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Custom Hosting</Link></li>
             </ul>
           </div>
 

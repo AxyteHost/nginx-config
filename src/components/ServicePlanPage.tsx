@@ -3,7 +3,7 @@ import { Check, ShoppingCart, Zap, Cpu } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const DISCORD_LINK = "https://discord.gg/renderbyte";
+const BUY_LINK = "https://renderbyte.site/billing";
 
 export interface Plan {
   name: string;
@@ -11,6 +11,7 @@ export interface Plan {
   ram?: string;
   memory?: string;
   cpu?: string;
+  disk?: string;
   features: string[];
   popular?: boolean;
 }
@@ -75,6 +76,14 @@ const ServicePlanPage = ({ title, subtitle, plans, showSpecs = false }: ServiceP
 
                     {showSpecs && (
                       <div className="space-y-2 mb-4 border-t border-b border-white/10 py-3">
+                        {plan.cpu && (
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="flex items-center gap-2 text-muted-foreground">
+                              <Cpu size={14} className="text-primary" /> CPU
+                            </span>
+                            <span className="text-foreground font-medium">{plan.cpu}</span>
+                          </div>
+                        )}
                         {plan.memory && (
                           <div className="flex items-center justify-between text-sm">
                             <span className="flex items-center gap-2 text-muted-foreground">
@@ -83,12 +92,12 @@ const ServicePlanPage = ({ title, subtitle, plans, showSpecs = false }: ServiceP
                             <span className="text-foreground font-medium">{plan.memory}</span>
                           </div>
                         )}
-                        {plan.cpu && (
+                        {plan.disk && (
                           <div className="flex items-center justify-between text-sm">
                             <span className="flex items-center gap-2 text-muted-foreground">
-                              <Cpu size={14} className="text-primary" /> CPU
+                              <Zap size={14} className="text-primary" /> Disk
                             </span>
-                            <span className="text-foreground font-medium">{plan.cpu}</span>
+                            <span className="text-foreground font-medium">{plan.disk}</span>
                           </div>
                         )}
                       </div>
@@ -104,7 +113,7 @@ const ServicePlanPage = ({ title, subtitle, plans, showSpecs = false }: ServiceP
                     </ul>
 
                     <a
-                      href={DISCORD_LINK}
+                      href={BUY_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 w-full py-3 rounded-lg border border-white/10 bg-secondary/50 text-foreground font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors mt-auto"

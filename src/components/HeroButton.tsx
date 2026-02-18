@@ -11,7 +11,7 @@ const HeroButton = ({ children, variant = "primary", icon, href }: HeroButtonPro
   const inner = (
     <>
       <span className="absolute inset-0 overflow-hidden rounded-full">
-        <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,hsl(270_70%_72%_/_0.6)_0%,hsl(270_70%_72%_/_0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,hsl(200_100%_55%_/_0.6)_0%,hsl(200_100%_55%_/_0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </span>
       <div className={`relative flex space-x-2 items-center z-10 rounded-full py-3 px-6 ring-1 ring-white/10 ${
         variant === "primary" ? "bg-zinc-950" : "bg-zinc-950/70 border border-white/20"
