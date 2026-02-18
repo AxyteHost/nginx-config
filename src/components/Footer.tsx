@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <img src="/images/logo.png" alt="RenderByte" className="w-9 h-9 rounded" />
-              <span className="text-foreground font-bold text-lg">RenderByte</span>
+              <span className="text-lg font-bold"><span className="text-primary">Render</span><span className="text-foreground">Byte</span></span>
             </Link>
             <p className="text-muted-foreground text-sm mb-6">
               Premium hosting solutions for Discord bots, game servers, and VPS. Lightning-fast and reliable.

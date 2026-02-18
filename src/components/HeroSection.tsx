@@ -14,12 +14,8 @@ const HeroSection = () => {
   return (
     <section className="relative flex flex-col items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img src="/images/banner-eiro.png" alt="EIRO Banner" className="w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <span className="text-[12rem] sm:text-[18rem] md:text-[24rem] font-black tracking-widest text-foreground/[0.04] leading-none">
-            EIRO
-          </span>
-        </div>
+        <img src="/images/banner-eiro.png" alt="Banner" className="w-full h-full object-cover opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
       </div>
 
       <div className="relative z-10 container mx-auto max-w-7xl">
@@ -38,7 +34,7 @@ const HeroSection = () => {
               Experience lightning-fast performance, unbeatable reliability, and 24/7 support for all your favorite games and applications.
             </p>
             <div className="mt-8 flex items-center space-x-6">
-              <HeroButton href="https://discord.gg/renderbyte" icon={<ArrowRight size={20} />}>Get Started</HeroButton>
+              <HeroButton href="https://renderbyte.site/billing" icon={<ArrowRight size={20} />}>Get Started</HeroButton>
               <HeroButton variant="secondary" href="#features" icon={<ExternalLink size={16} />}>Learn More</HeroButton>
             </div>
             <p className="mt-6 text-sm text-muted-foreground/60">··· Get started for free!</p>
