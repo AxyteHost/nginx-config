@@ -8,7 +8,7 @@ const plans = [
   {
     name: "Bot Hosting",
     image: "/images/discord.png",
-    startingPrice: "₹1.00",
+    startingPrice: "₹39.99",
     popular: true,
     link: "/services/discord",
     features: ["ECC Memory", "Fast Performance", "Low Latency", "Advanced security", "Managed services"],
@@ -16,7 +16,7 @@ const plans = [
   {
     name: "Minecraft Servers",
     image: "/images/mc.jpg",
-    startingPrice: "₹2.50",
+    startingPrice: "₹29.00",
     popular: false,
     link: "/services/minecraft",
     features: ["Instant deployment", "DDoS protection", "24/7 support", "Custom configurations", "Mod support"],
@@ -24,7 +24,7 @@ const plans = [
   {
     name: "Hytale Hosting",
     image: "/images/hytale.jpg",
-    startingPrice: "₹79",
+    startingPrice: "₹79.00",
     popular: false,
     link: "/services/hytale",
     features: ["Up to 32GB RAM", "DDoS protection", "NVMe SSD", "Full mod support", "Instant setup"],

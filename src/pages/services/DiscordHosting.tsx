@@ -2,7 +2,7 @@ import ServicePlanPage, { Plan } from "@/components/ServicePlanPage";
 
 const plans: Plan[] = [
   {
-    name: "Basic Plan",
+    name: "Basic",
     price: "₹39.99",
     cpu: "50%",
     memory: "512MB DDR5",
@@ -11,7 +11,7 @@ const plans: Plan[] = [
     buyLink: "https://renderbyte.site/billing/index.php?rp=/store/discord-bot-hosting/basic-plan",
   },
   {
-    name: "Premium Plan",
+    name: "Premium",
     price: "₹69.99",
     cpu: "100%",
     memory: "1GB DDR5",
@@ -21,7 +21,7 @@ const plans: Plan[] = [
     buyLink: "https://renderbyte.site/billing/index.php?rp=/store/discord-bot-hosting/premium-plan",
   },
   {
-    name: "Ultra Plan",
+    name: "Ultra",
     price: "₹119.99",
     cpu: "200%",
     memory: "2GB DDR5",
