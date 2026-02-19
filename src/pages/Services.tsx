@@ -1,8 +1,11 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const rotatingWords = ["Game", "Bot", "VPS"];
 
 const services = [
   {
@@ -29,6 +32,15 @@ const services = [
 ];
 
 const Services = () => {
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -39,8 +51,22 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-5xl sm:text-6xl font-bold">
-              Game <span className="text-primary">Hosting</span>
+            <h1 className="text-5xl sm:text-6xl font-bold inline-flex items-baseline justify-center gap-3">
+              <span className="inline-block relative w-[180px] sm:w-[220px] h-[1.2em] overflow-hidden text-right">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={rotatingWords[wordIndex]}
+                    className="absolute right-0 text-gradient-blue"
+                    initial={{ y: 40, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -40, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                  >
+                    {rotatingWords[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              <span className="text-primary">Hosting</span>
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               Premium performance for your favorite games.
