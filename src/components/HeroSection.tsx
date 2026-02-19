@@ -65,26 +65,32 @@ const HeroSection = () => {
             <p className="mt-6 text-sm text-muted-foreground/60">··· Get started for free!</p>
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-2 gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            {heroCards.map((card) => (
-              <GlowCard key={card.title}>
-                <div className="relative flex flex-1 flex-col justify-between gap-3">
-                  <div className="w-fit rounded-lg p-2">
-                    <card.icon size={28} className="text-primary" />
+          <div className="grid grid-cols-2 gap-4">
+            {heroCards.map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 + i * 0.12, ease: "easeOut" }}
+                whileHover={{ y: -6, transition: { duration: 0.25 } }}
+              >
+                <GlowCard>
+                  <div className="relative flex flex-1 flex-col justify-between gap-3">
+                    <motion.div
+                      className="w-fit rounded-lg p-2"
+                      whileHover={{ rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
+                    >
+                      <card.icon size={28} className="text-primary" />
+                    </motion.div>
+                    <div className="space-y-2">
+                      <h3 className="font-sans text-lg font-semibold text-balance text-foreground md:text-xl">{card.title}</h3>
+                      <p className="font-sans text-sm text-muted-foreground md:text-base">{card.desc}</p>
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="font-sans text-lg font-semibold text-balance text-foreground md:text-xl">{card.title}</h3>
-                    <p className="font-sans text-sm text-muted-foreground md:text-base">{card.desc}</p>
-                  </div>
-                </div>
-              </GlowCard>
+                </GlowCard>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

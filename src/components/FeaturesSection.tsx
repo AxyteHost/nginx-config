@@ -32,16 +32,20 @@ const FeaturesSection = () => {
             <motion.div
               key={feat.title}
               className={`${feat.span} row-span-1`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
+              transition={{ delay: i * 0.08, duration: 0.5, ease: "easeOut" }}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
             >
               <GlowCard>
                 <div className="relative flex flex-1 flex-col justify-between gap-3">
-                  <div className="w-fit rounded-lg p-2">
+                  <motion.div
+                    className="w-fit rounded-lg p-2"
+                    whileHover={{ rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
+                  >
                     <feat.icon size={28} className="text-primary" />
-                  </div>
+                  </motion.div>
                   <div className="space-y-2">
                     <h3 className="font-sans text-lg font-semibold text-balance text-foreground md:text-xl">{feat.title}</h3>
                     <p className="font-sans text-sm text-muted-foreground md:text-base">{feat.desc}</p>
