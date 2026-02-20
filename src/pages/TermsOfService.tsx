@@ -82,7 +82,7 @@ const TermsOfService = () => {
                 <h2 className="text-2xl font-bold text-foreground mb-3">Contact Us</h2>
                 <p>
                   If you have questions about these Terms, contact us at{" "}
-                  <a href="mailto:support@renderbyte.com" className="text-primary hover:underline">support@renderbyte.com</a>
+                  <a href="mailto:support@renderbyte.com" className="text-primary hover:underline">hello@renderbyte.site</a>
                 </p>
               </section>
             </div>
