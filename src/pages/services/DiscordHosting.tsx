@@ -8,7 +8,7 @@ const plans: Plan[] = [
     memory: "512MB DDR5",
     disk: "2GB NVMe",
     features: ["Unlimited Bandwidth", "24/7 Uptime", "Git Integration", "Basic Support"],
-    buyLink: "/billing/index.php?rp=/store/discord-bot-hosting/",
+    buyLink: "https://renderbyte.site/billing/index.php?rp=/store/discord-bot-hosting/",
   },
   {
     name: "Premium",
@@ -18,7 +18,7 @@ const plans: Plan[] = [
     disk: "6GB NVMe",
     popular: true,
     features: ["Unlimited Bandwidth", "24/7 Uptime", "Git Integration", "Priority Support"],
-    buyLink: "/billing/index.php?rp=/store/discord-bot-hosting/",
+    buyLink: "https://renderbyte.site/billing/index.php?rp=/store/discord-bot-hosting/",
   },
   {
     name: "Ultra",
@@ -27,7 +27,7 @@ const plans: Plan[] = [
     memory: "2GB DDR5",
     disk: "15GB NVMe",
     features: ["Unlimited Bandwidth", "24/7 Uptime", "Git Integration", "Priority Support", "Custom Subdomain"],
-    buyLink: "/billing/index.php?rp=/store/discord-bot-hosting/",
+    buyLink: "https://renderbyte.site/billing/index.php?rp=/store/discord-bot-hosting/",
   },
 ];
 

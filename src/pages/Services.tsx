@@ -51,12 +51,12 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-5xl sm:text-6xl font-bold inline-flex items-baseline justify-center gap-3">
-              <span className="inline-block relative w-[180px] sm:w-[220px] h-[1.2em] overflow-hidden text-right">
+            <h1 className="text-5xl sm:text-6xl font-bold flex items-center justify-center gap-3">
+              <span className="inline-block relative w-[140px] sm:w-[180px] h-[1.2em] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={rotatingWords[wordIndex]}
-                    className="absolute right-0 text-gradient-blue"
+                    className="absolute inset-0 flex items-center justify-end text-gradient-blue"
                     initial={{ y: 40, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -40, opacity: 0 }}
@@ -66,7 +66,7 @@ const Services = () => {
                   </motion.span>
                 </AnimatePresence>
               </span>
-              <span className="text-primary">Hosting</span>
+              <span className="text-foreground">Hosting</span>
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               Premium performance for your servers.

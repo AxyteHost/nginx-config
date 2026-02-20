@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Support from "./pages/Support";
 import TermsOfService from "./pages/TermsOfService";
 import Privacy from "./pages/Privacy";
+import RefundPolicy from "./pages/RefundPolicy";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/support" element={<Support />} />
           <Route path="/tos" element={<TermsOfService />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/refund" element={<RefundPolicy />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
