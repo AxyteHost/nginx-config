@@ -59,9 +59,12 @@ const Support = () => {
                   <p className="text-muted-foreground mb-6">
                     For billing inquiries or formal support, please send us an email or open a support ticket.
                   </p>
-                  <div className="w-full py-3 rounded-lg border border-white/10 bg-secondary/30 text-foreground font-medium text-sm text-center mt-auto">
-                    Email: support@renderbyte.com
-                  </div>
+                  <a
+                    href="mailto:hello@renderbyte.site"
+                    className="w-full py-3 rounded-lg border border-white/10 bg-secondary/30 text-foreground font-medium text-sm text-center mt-auto block hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    hello@renderbyte.site
+                  </a>
                 </div>
               </div>
             </motion.div>

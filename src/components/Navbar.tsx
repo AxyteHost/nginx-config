@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, ChevronDown, Info, Headset, FileText, ShieldCheck } from "lucide-react";
+import { Menu, X, ChevronDown, Info, Headset, FileText, ShieldCheck, ReceiptText } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const DISCORD_LINK = "https://discord.gg/renderbyte";
@@ -50,6 +50,7 @@ const Navbar = () => {
                   <Link to="/support" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><Headset size={15} /> Support</Link>
                   <Link to="/tos" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><FileText size={15} /> Terms of Service</Link>
                   <Link to="/privacy" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><ShieldCheck size={15} /> Privacy Policy</Link>
+                  <Link to="/refund" className="flex items-center gap-2.5 px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"><ReceiptText size={15} /> Refund Policy</Link>
                 </div>
               )}
             </div>
@@ -83,6 +84,7 @@ const Navbar = () => {
           <Link to="/support" className="block text-muted-foreground font-medium py-2">Support</Link>
           <Link to="/tos" className="block text-muted-foreground font-medium py-2">Terms of Service</Link>
           <Link to="/privacy" className="block text-muted-foreground font-medium py-2">Privacy Policy</Link>
+          <Link to="/refund" className="block text-muted-foreground font-medium py-2">Refund Policy</Link>
           <a href={DISCORD_LINK} target="_blank" rel="noopener noreferrer" className="block w-full bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold mt-2 text-center">Discord</a>
         </div>
       )}
