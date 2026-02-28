@@ -11,7 +11,7 @@ const services = [
   {
     name: "Minecraft",
     image: "/images/mc.jpg",
-    price: "₹29.00",
+    price: "₹98.00",
     link: "/services/minecraft",
     available: true,
   },
