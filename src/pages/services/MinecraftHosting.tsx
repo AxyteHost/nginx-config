@@ -3,7 +3,7 @@ import ServicePlanPage, { Plan } from "@/components/ServicePlanPage";
 const plans: Plan[] = [
   {
     name: "Dirt Plan",
-    price: "₹29.00",
+    price: "₹98.00",
     ram: "2GB DDR4",
     cpu: "100%",
     disk: "5GB NVMe",
@@ -12,7 +12,7 @@ const plans: Plan[] = [
   },
   {
     name: "Stone Plan",
-    price: "₹49.00",
+    price: "₹198.00",
     ram: "4GB DDR4",
     cpu: "150%",
     disk: "10GB NVMe",
@@ -21,7 +21,7 @@ const plans: Plan[] = [
   },
   {
     name: "Coal Plan",
-    price: "₹85.00",
+    price: "₹298.00",
     ram: "6GB DDR4",
     cpu: "200%",
     disk: "15GB NVMe",
@@ -30,7 +30,7 @@ const plans: Plan[] = [
   },
   {
     name: "Iron Plan",
-    price: "₹128.00",
+    price: "₹398.00",
     ram: "8GB DDR4",
     cpu: "250%",
     disk: "20GB NVMe",
@@ -40,7 +40,7 @@ const plans: Plan[] = [
   },
   {
     name: "Gold Plan",
-    price: "₹159.00",
+    price: "₹498.00",
     ram: "10GB DDR4",
     cpu: "300%",
     disk: "25GB NVMe",
@@ -49,7 +49,7 @@ const plans: Plan[] = [
   },
   {
     name: "Diamond Plan",
-    price: "₹189.00",
+    price: "₹598.00",
     ram: "12GB DDR4",
     cpu: "350%",
     disk: "30GB NVMe",
@@ -58,7 +58,7 @@ const plans: Plan[] = [
   },
   {
     name: "Emerald Plan",
-    price: "₹228.00",
+    price: "₹798.00",
     ram: "16GB DDR4",
     cpu: "400%",
     disk: "40GB NVMe",
@@ -67,7 +67,7 @@ const plans: Plan[] = [
   },
   {
     name: "Netherite Plan",
-    price: "₹278.00",
+    price: "₹998.00",
     ram: "20GB DDR4",
     cpu: "450%",
     disk: "45GB NVMe",
@@ -76,7 +76,7 @@ const plans: Plan[] = [
   },
   {
     name: "Obsidian Plan",
-    price: "₹328.00",
+    price: "₹1198.00",
     ram: "20GB DDR4",
     cpu: "450%",
     disk: "45GB NVMe",
